@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: #333;
+    font-family: 'Caveat', cursive;
+    line-height: 1.6;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+/* Barra de navegación */
+nav.barrita {
+    background-color: rgba(80, 49, 49, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+ul.barrita {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.barrita li {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.barrita li:hover {
+    color: #f8d0a0;
+    transform: translateY(-2px);
+}
+
+#porta {
+    color: #fff;
+    font-family: 'Sixtyfour', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Sección Sobre mí */
+#sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 5%;
+    margin-top: 100px;
+    position: relative;
+}
+
+/* Imagen de perfil */
+.img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+    flex: 0 0 auto;
+}
+
+.img:hover {
+    transform: scale(1.05);
+}
+
+/* Sección Sobre mi */
+.sobre {
+    border: none;
+    border-radius: 10px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    flex: 1;
+    margin-left: 30px;
+}
+      
