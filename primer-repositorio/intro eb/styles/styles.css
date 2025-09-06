@@ -212,4 +212,19 @@ ul.barrita {
         margin: 15px 0;
     }
 }
+
+/* Estilos para los enlaces de navegación */
+.barrita-menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.barrita-menu li a:hover {
+    color: #f8d0a0;
+}
+
+html {
+    scroll-behavior: smooth; /* Para el desplazamiento suave en todo el sitio */
+}
       

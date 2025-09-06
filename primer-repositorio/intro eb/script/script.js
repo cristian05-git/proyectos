@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+    // Código existente para el menú hamburguesa
     const menuToggle = document.getElementById('menu-toggle');
     const barritaMenu = document.getElementById('barrita-menu');
     
@@ -27,24 +27,47 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Navegación con desplazamiento suave
+    const navLinks = document.querySelectorAll('.nav-link');
     
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Si el enlace es el de inicio (href="#"), no hacemos nada especial
+            if (this.getAttribute('href') === '#') return;
+            
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                // Calcular la posición de la sección teniendo en cuenta la barra de navegación fija
+                const navHeight = document.querySelector('nav.barrita').offsetHeight;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                
+                // Desplazamiento suave
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Código existente para el formulario de contacto
     const formularioContacto = document.getElementById('formulario-contacto');
     
     if (formularioContacto) {
         formularioContacto.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            
             const nombre = document.getElementById('nombre').value;
             const apellido = document.getElementById('apellido').value;
             const email = document.getElementById('email').value;
-            
             
             if (nombre.trim() === '' || apellido.trim() === '' || email.trim() === '') {
                 alert('Por favor, complete todos los campos.');
                 return;
             }
-            
             
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
@@ -52,9 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            
             alert(`Formulario enviado correctamente:\n\nNombre: ${nombre}\nApellido: ${apellido}\nEmail: ${email}`);
-            
             
             formularioContacto.reset();
         });
