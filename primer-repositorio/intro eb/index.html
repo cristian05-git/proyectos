@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     
-    <!-- Estilos -->
+    
     <link rel="stylesheet" href="body.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/habilidades.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 
@@ -25,7 +27,10 @@
             <div class="container">
                 <h1 id="porta">Portafolio</h1>
             </div>
-            <ul class="barrita">
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="barrita-menu" id="barrita-menu">
                 <li>Inicio</li>
                 <li>Sobre mí</li>
                 <li>Habilidades</li>
@@ -36,7 +41,7 @@
     </header>
 
     <main>
-        <!-- Sección Sobre mí -->
+        
         <section id="sobre-mi">
             <img class="img" src="assets/imagenes/azul.jpg" alt="Foto de Cristian Galvan">
             <div class="sobre">
@@ -45,7 +50,7 @@
             </div>
         </section>
 
-        <!-- Sección Habilidades -->
+        
         <section id="habilidades">
             <h2>Habilidades</h2>
             <div class="habilidades-container">
@@ -64,14 +69,37 @@
             </div>
         </section>
 
-        <!-- Sección Proyectos -->
+        
         <section id="proyectos">
             <h2>Proyectos</h2>
             <div class="proyectos-container">
                 <h3>Mi proyecto más reciente en HTML y CSS es este portafolio que estás viendo. Diseñado con un enfoque en la experiencia de usuario y estética visual.</h3>
             </div>
         </section>
+
+        
+        <section id="contacto">
+            <h2>Contáctenos</h2>
+            <div class="formulario-container">
+                <form id="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
+    <script src="script/script.js"></script>
 
     <footer>
         <p>Contacto: galvancristian5@gmail.com</p>
